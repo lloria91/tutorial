@@ -1,12 +1,28 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
-import Intro from './intro'
+import Header from './components/Header'
 
 class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
+      notes: [
+        {
+          id: 1,
+          title: 'Add course notes',
+          details: 'Need to add more details to the course'
+        },
+        {
+          id: 2,
+          title: 'Use unreal or unity',
+          details: 'Need to add more details to the course'
+        },
+        {
+          id: 3,
+          title: 'List of gifts',
+          details: 'Need to add more details to the course'
+        }
+      ],
       name: 'Manny'
     }
   }
@@ -14,11 +30,7 @@ class App extends React.Component {
   render () {
     return (
       <div className='App'>
-        <div className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <h2>{this.state.name}, welcome to React.</h2>
-        </div>
-        <Intro name={this.state.name} />
+        <Header name={this.state.name} />
       </div>
     )
   }
