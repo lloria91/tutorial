@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import Header from './components/Header'
+import Grid from './components/Grid'
 
 class App extends React.Component {
   constructor (props) {
@@ -31,6 +32,7 @@ class App extends React.Component {
     return (
       <div className='App'>
         <Header name={this.state.name} />
+        <Grid notes={this.state.notes} />
       </div>
     )
   }
